@@ -6,11 +6,13 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 10%;
+  font-family: roboto;
 }
 
 .logo {
   font-size: 2rem;
   color: white;
+  font-family: roboto;
 }
 
 .header ul {
@@ -19,17 +21,19 @@
   padding: 0;
   display: flex;
   align-items: baseline;
+  font-family: roboto;
 }
 
 .header li {
-  marigin-left: 3.5rem;
   padding: 1rem;
+  font-family: roboto;
 }
 
 .header a {
   text-decoration: none;
   font-size: 1.5rem;
   color: white;
+
 }
 
 .header a:hover,

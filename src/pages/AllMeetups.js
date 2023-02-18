@@ -1,37 +1,41 @@
+import MeetupList from "../components/meetups/MeetupList";
+import React from 'react';
+
+
 //for dev purposes hold the dummy meetups
 const DUMMY_DATA = [
   {
     id: "m1",
-    Title: "Meetup 1",
-    Image:
-      "https://pixabay.com/photos/tree-sunset-clouds-sky-silhouette-736885/",
+    title: "Meetup 1",
+    image:
+      "https://i.stack.imgur.com/Of2w5.jpg",
     address: "123 Main St, Raincity",
     description: "test meetup #1",
   },
 
   {
     id: "m2",
-    Title: "Meetup 2",
-    Image:
-      "https://pixabay.com/photos/sunrise-boat-rowing-boat-nobody-1014712/",
+    title: "Meetup 2",
+    image:
+      "https://www.wallpapertip.com/wmimgs/8-82164_soothing-background.jpg",
     address: "34 rain St, Raincity",
     description: "test meetup #2",
   },
 
   {
     id: "m3",
-    Title: "Meetup 3",
-    Image:
-      "https://pixabay.com/photos/road-forest-fall-path-trail-trees-1072821/",
+    title: "Meetup 3",
+    image:
+      "https://www.freepsdbazaar.com/wp-content/uploads/2020/06/stbd/new-bg/digital-background-2.jpg",
     address: "345 water St, Raincity",
     description: "test meetup #3",
   },
 
   {
     id: "m4",
-    Title: "Meetup 4",
-    Image:
-      "https://pixabay.com/photos/mountains-sun-clouds-peak-summit-190055/",
+    title: "Meetup 4",
+    image:
+      "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2017/11/autumn_fireball/17255671-1-eng-GB/Autumn_fireball.jpg",
     address: "56 boat St, Raincity",
     description: "test meetup #4",
   },
@@ -41,11 +45,7 @@ function AllMeetupsPage() {
   return (
     <section>
       <h1>All Meetups</h1>
-      <ul>
-        {DUMMY_DATA.map((meetup) => {
-          return <li key={meetup.id}>{meetup.Title}</li>;
-        })}
-      </ul>
+      <MeetupList meetups={DUMMY_DATA} />
     </section>
   );
 }
