@@ -1,0 +1,47 @@
+.header {
+  background-color: rgb(10, 10, 255);
+  height: 5rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+
+.logo {
+  font-size: 2rem;
+  color: white;
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+}
+
+.header li {
+  marigin-left: 3.5rem;
+  padding: 1rem;
+}
+
+.header a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.header a:hover,
+.header a:active,
+.header a.active {
+  color: yellowgreen;
+}
+
+.badge {
+  background-color: aqua;
+  color: white;
+  border-radius: 12px;
+  padding: 0 1rem;
+  margin-left: 0.5rem;
+}
