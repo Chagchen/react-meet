@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(10, 10, 255);
+  background-color: rgb(27, 27, 174);
   height: 5rem;
   display: flex;
   width: 100%;
@@ -7,6 +7,8 @@
   justify-content: space-between;
   padding: 0 10%;
   font-family: roboto;
+  font-weight: 900;
+  border-radius: 6px;
 }
 
 .logo {
