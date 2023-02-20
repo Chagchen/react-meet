@@ -1,6 +1,7 @@
 //setup for React 18 
 import ReactDOM from 'react-dom/client';
 import React from 'react';
+import { jsx as _jsx } from "react/jsx-runtime";
 import './index.css';
 import App from './App.js';
 import { BrowserRouter } from 'react-router-dom';
