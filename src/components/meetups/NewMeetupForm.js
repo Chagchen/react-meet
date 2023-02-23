@@ -4,7 +4,7 @@ import React from "react";
 import { jsx as _jsx } from "react/jsx-runtime";
 import { useRef } from "react";
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const addressInputRef = useRef();
@@ -23,7 +23,7 @@ function NewMeetupForm() {
       address: enteredAddress,
       description: enteredDesription
     };
-    console.log(meetupData);
+    props.onAddMeetup(meetupData); //we add this onAddMeetup to the NewNeetup.js
   }
   return (
     <Card>
