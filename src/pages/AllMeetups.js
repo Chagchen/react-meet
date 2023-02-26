@@ -1,6 +1,6 @@
 import MeetupList from "../components/meetups/MeetupList";
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //for dev purposes hold the dummy meetups
 // const DUMMY_DATA = [
@@ -16,23 +16,34 @@ import { useState } from "react";
 function AllMeetupsPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedMeetups, setLoadedMetups] = useState([]);
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("https://react-meet-14c23-default-rtdb.firebaseio.com/meetups.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const meetups = [];
 
-  fetch("https://react-meet-14c23-default-rtdb.firebaseio.com/meetups.json")
-    .then((response) => {
-      return response.json();
-    })
-    .then((data) => {
-      setIsLoading(false);
-      setLoadedMetups(data);
-    }); //not loading anymore, set it false when we have the data
+        for (const key in data) {
+          const meetup = { id: key,
+          ...data[key]
+        };
+         meetups.push(meetup);     
+        }
 
-    if (isLoading) {
-      return (
-        <section>
-          <p>Loading...</p>
-        </section>
-      );
-    }
+        setIsLoading(false);
+        setLoadedMetups(meetups);
+      }); //not loading anymore, set it false when we have the data
+  }, []);
+
+  if (isLoading) {
+    return (
+      <section>
+        <p>Loading...</p>
+      </section>
+    );
+  }
 
   return (
     <section>
